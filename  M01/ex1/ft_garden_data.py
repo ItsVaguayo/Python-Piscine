@@ -1,14 +1,17 @@
 class Plant:
-    def __init__(self, name, height, age):
+    """A class representing a plant in the garden."""
+    def __init__(self, name: str, height: int, age: int) -> None:
+        """Initialize a new Plant instance."""
         self.name = name
         self.height = height
         self.age = age
 
 
-def ft_garden_data():
-    rose = Plant("Rose", 25, 30)
-    sunflower = Plant("Sunflower", 80, 45)
-    cactus = Plant("Cactus", 15, 120)
+def ft_garden_data() -> None:
+    """This function creates sample plant data and prints their details."""
+    rose: Plant = Plant("Rose", 25, 30)
+    sunflower: Plant = Plant("Sunflower", 80, 45)
+    cactus: Plant = Plant("Cactus", 15, 120)
 
     print("=== Garden Plant Registry ===")
     print(f"{rose.name}: {rose.height}cm, {rose.age} days old")

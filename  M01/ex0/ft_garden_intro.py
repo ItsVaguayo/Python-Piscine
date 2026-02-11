@@ -1,10 +1,11 @@
-def main():
-    name = "Rose"
-    height = "25cm"
-    age = 30
+def main() -> None:
+    """This function introduces the garden and a sample plant."""
+    name: str = "Rose"
+    height: int = 25
+    age: int = 30
     print("=== Welcome to My Garden ===")
     print(f"Plant: {name}")
-    print(f"Height: {height}")
+    print(f"Height: {height}cm")
     print(f"Age: {age} days")
     print("\n=== End of Program ===")
 
