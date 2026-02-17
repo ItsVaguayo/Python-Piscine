@@ -6,8 +6,8 @@ def garden_operations(error: str) -> None:
     elif error == "FileNotFoundError":
         open("missing.txt")
     elif error == "KeyError":
-        plantas = {}
-        print(plantas["cactus"])
+        plants = {}
+        print(plants["cactus"])
 
 
 def test_error_types() -> None:
