@@ -10,9 +10,10 @@ def ft_score_analytics() -> None:
             "<score1> <score2> ..."
         )
         return
-    scores: list[str] = sys.argv[1:]
+    scores_str: list[str] = sys.argv[1:]
+    scores: list[int] = []
     try:
-        scores = [int(x) for x in scores]
+        scores = [int(x) for x in scores_str]
     except ValueError as e:
         print(f"Error: {e}")
     print("Score processed:", scores)

@@ -18,8 +18,8 @@ def ft_coordinate_system() -> None:
         print("This program need 2 arguments.. Try again")
         return
     print("=== Game Coordinate System ===\n")
-    tuple0 = (0, 0, 0)
-    tuple1 = (10, 20, 5)
+    tuple0: tuple[int, int, int] = (0, 0, 0)
+    tuple1: tuple[int, int, int] = (10, 20, 5)
     print("Position created:", tuple1)
     print(f"Distance between {tuple0} and {tuple1}:",
           f"{calculate_distance(tuple0, tuple1):.2f}")
@@ -37,6 +37,9 @@ def ft_coordinate_system() -> None:
     print("Unpacking demonstration:")
     print(f'Player at x={tuple1[0]}, y={tuple1[1]},'
           f' z={tuple1[2]}')
+    x: int
+    y: int
+    z: int
     x, y, z = tuple1
     print(f'Coordinates: X={x}, Y={y}, Z={z}')
 
