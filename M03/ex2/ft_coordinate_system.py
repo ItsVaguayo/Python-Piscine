@@ -24,10 +24,14 @@ def ft_coordinate_system() -> None:
     print(f"Distance between {tuple0} and {tuple1}:",
           f"{calculate_distance(tuple0, tuple1):.2f}")
     print(f"\nParsing coordinates: '{sys.argv[1]}'")
-    tuple1 = parse_argv(sys.argv[1].split(","))
-    print("Parsed position:", tuple1)
-    print(f"Distance between {tuple0} and {tuple1}:",
-          f"{calculate_distance(tuple0, tuple1):.1f}")
+    try:
+        tuple1 = parse_argv(sys.argv[1].split(","))
+        print("Parsed position:", tuple1)
+        print(f"Distance between {tuple0} and {tuple1}:",
+              f"{calculate_distance(tuple0, tuple1):.1f}")
+    except ValueError as e:
+        print("Error parsing coordinates:", e)
+        print(f"Error details - Type: {type(e).__name__}, Args: {e.args}\n")
     print(f"\nParsing invalid coordinates: '{sys.argv[2]}'")
     try:
         tuple1 = parse_argv(sys.argv[2].split(","))
