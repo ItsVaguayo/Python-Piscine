@@ -21,3 +21,5 @@ The Piscine is organized into **11 modules**, progressing from language fundamen
 | 08 | Environments | Virtual environments, `pip`, and project configuration |
 | 09 | Data Validation | Building reliable data models with **Pydantic** |
 | 10 | Functional Programming | Decorators, lambdas, and higher-order functions |
+---
+This project was completed as part of the 42 curriculum.
