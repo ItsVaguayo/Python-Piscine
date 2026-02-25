@@ -1,7 +1,7 @@
 import sys
 
 
-def ft_stream_management():
+def ft_stream_management() -> None:
     print("=== CYBER ARCHIVES - COMMUNICATION SYSTEM ===")
 
     archivist_id = input("Input Stream active. Enter archivist ID: ")

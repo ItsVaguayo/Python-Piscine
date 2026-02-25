@@ -1,4 +1,4 @@
-def ft_ancient_text():
+def ft_ancient_text() -> None:
     print("=== CYBER ARCHIVES - DATA RECOVERY SYSTEM ===")
     print("\nAccessing Storage Vault: ancient_fragment.txt")
     try:

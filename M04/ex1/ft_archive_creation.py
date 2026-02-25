@@ -1,4 +1,4 @@
-def ft_archive_creation():
+def ft_archive_creation() -> None:
     print("=== CYBER ARCHIVES - PRESERVATION SYSTEM ===")
     print("Initializing new storage unit: new_discovery.txt")
     try:
