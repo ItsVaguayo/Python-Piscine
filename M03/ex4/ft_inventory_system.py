@@ -12,8 +12,9 @@ def ft_inventory_system() -> None:
     print("Unique item types:", len(inventory))
     print("\n=== Current Inventory ===")
     for item, count in inventory.items():
-        print(f"{item}: {count} units ({(count / total_items)
-              * 100:.2f}%)")
+        print(
+            f"{item}: {count} units ({(count / total_items) * 100:.2f}%)"
+        )
     print("\n=== Inventory Statistics ===")
     for item, value in inventory.items():
         if value == max(inventory.values()):
