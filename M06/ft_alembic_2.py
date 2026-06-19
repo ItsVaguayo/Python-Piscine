@@ -1,4 +1,10 @@
-"""ft_alembic_2.py - placeholder alembic file."""
 
 def alembic_2():
-    return "alembic 2"
+    import alchemy.elements
+    print("=== Alembic 2 ===")
+    print("Accessing alchemy/elements.py using 'import ...' structure")
+    print("Testing create_earth:", alchemy.elements.create_earth())
+
+
+if __name__ == "__main__":
+    alembic_2()

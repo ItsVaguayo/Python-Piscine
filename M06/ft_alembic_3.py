@@ -1,4 +1,11 @@
-"""ft_alembic_3.py - placeholder alembic file."""
 
 def alembic_3():
-    return "alembic 3"
+    from alchemy.elements import create_air
+    print("=== Alembic 3 ===")
+    print(
+        "accessing alchemy/elements.py using 'from ... import ...' structure")
+    print("Testing create_air:", create_air())
+
+
+if __name__ == "__main__":
+    alembic_3()
