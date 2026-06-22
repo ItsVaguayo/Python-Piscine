@@ -1,9 +1,9 @@
-def distillation_1():
-    from alchemy import strength_potion, healing_potion as heal
+def distillation_1() -> None:
+    import alchemy
     print("=== Distillation 1 ===")
-    print("Direct access to alchemy/potions.py")
-    print("Testing strength_potion:", strength_potion())
-    print("Testing heal alias:", heal())
+    print("Using: 'import alchemy' structure to access potions")
+    print("Testing strength_potion:", alchemy.strength_potion())
+    print("Testing heal alias:", alchemy.heal())
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-def ft_transmutation_0():
+def ft_transmutation_0() -> None:
     import alchemy.transmutation.recipes
     print("=== Transmutation 0 ===")
     print("Using file alchemy/transmutation/recipes.py directly")

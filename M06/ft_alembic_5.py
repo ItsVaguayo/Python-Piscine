@@ -1,5 +1,5 @@
 
-def alembic_5():
+def alembic_5() -> None:
     from alchemy import create_air
     print("=== Alembic 5 ===")
     print("Accessing the alchemy module using 'from alchemy import ...'")

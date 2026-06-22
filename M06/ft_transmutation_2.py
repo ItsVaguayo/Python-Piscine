@@ -1,4 +1,4 @@
-def ft_transmutation_2():
+def ft_transmutation_2() -> None:
     import alchemy
     print("=== Transmutation 2 ===")
     print("Import alchemy module only")
