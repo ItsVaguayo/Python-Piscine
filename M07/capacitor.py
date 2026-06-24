@@ -1,4 +1,5 @@
-from ex1 import HealingCreatureFactory, TransformCreatureFactory, HealCapability, TransformCapability
+from ex1 import HealingCreatureFactory, TransformCreatureFactory
+from ex1 import HealCapability, TransformCapability
 from ex0.factory import CreatureFactory
 from ex0.creature import Creature
 

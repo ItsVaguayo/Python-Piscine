@@ -8,7 +8,7 @@ def fabric_checker(factory: CreatureFactory) -> None:
     creature: Creature = factory.create_base()
     print(creature.describe())
     print(creature.attack())
-    creature: Creature = factory.create_evolved()
+    creature = factory.create_evolved()
     print(creature.describe())
     print(creature.attack(), "\n")
 
