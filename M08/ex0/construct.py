@@ -48,7 +48,7 @@ def show_inside_venv() -> None:
     print("")
 
     packages_path = site.getsitepackages()[0] if site.getsitepackages() else ""
-    print(f"Package installation path:")
+    print("Package installation path:")
     print(f"    {packages_path}")
 
 

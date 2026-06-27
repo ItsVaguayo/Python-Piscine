@@ -44,10 +44,14 @@ def display_configuration(config: dict[str, str]) -> None:
     zion = config["ZION_ENDPOINT"]
 
     if mode == "production":
-        db_display = "Connected to production instance" if db_url else "Not configured"
+        db_display = (
+            "Connected to production instance" if db_url else "Not configured"
+        )
         zion_display = "Online (production)" if zion else "Offline"
     else:
-        db_display = "Connected to local instance" if db_url else "Not configured"
+        db_display = (
+            "Connected to local instance" if db_url else "Not configured"
+        )
         zion_display = "Online" if zion else "Offline"
 
     api_display = "Authenticated" if api_key else "Not configured"
@@ -81,7 +85,10 @@ def security_check(config: dict[str, str]) -> None:
     if env_file_ok or example_file_ok:
         print("  [OK] .env file properly configured")
     else:
-        print("  [WARN] No .env file found — using environment variables or defaults")
+        print(
+            "  [WARN] No .env file found"
+            " — using environment variables or defaults"
+        )
 
     print("  [OK] Production overrides available")
 

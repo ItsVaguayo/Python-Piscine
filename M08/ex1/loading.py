@@ -71,38 +71,20 @@ def run_analysis() -> None:
     print("")
     print("Analyzing Matrix data...")
     print("Processing 1000 data points...")
+    print("Generating visualization...")
 
     rng = np.random.default_rng(42)
-    matrix_data = rng.normal(loc=0.0, scale=1.0, size=1000)
+    data = rng.normal(size=1000)
 
-    df = pd.DataFrame({
-        "signal": matrix_data,
-        "index": np.arange(1000),
-    })
+    df = pd.DataFrame({"signal": data})
+    df["rolling"] = df["signal"].rolling(window=50).mean()
 
-    rolling_mean = df["signal"].rolling(window=50).mean()
-
-    fig, axes = plt.subplots(2, 1, figsize=(10, 6))
-
-    axes[0].plot(df["index"], df["signal"], alpha=0.4, color="green", linewidth=0.8)
-    axes[0].plot(df["index"], rolling_mean, color="red", linewidth=1.5)
-    axes[0].set_title("Matrix Signal (raw + 50-pt rolling mean)")
-    axes[0].set_xlabel("Index")
-    axes[0].set_ylabel("Signal")
-
-    axes[1].hist(df["signal"], bins=40, color="green", alpha=0.7, edgecolor="black")
-    axes[1].set_title("Signal Distribution")
-    axes[1].set_xlabel("Value")
-    axes[1].set_ylabel("Frequency")
-
-    plt.tight_layout()
-    output_path = "matrix_analysis.png"
-    plt.savefig(output_path)
+    df.plot(figsize=(10, 4), title="Matrix Signal")
+    plt.savefig("matrix_analysis.png")
     plt.close()
 
-    print("Generating visualization...")
     print("Analysis complete!")
-    print(f"Results saved to: {output_path}")
+    print("Results saved to: matrix_analysis.png")
 
 
 def main() -> None:
